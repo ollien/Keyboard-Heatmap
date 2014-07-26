@@ -11,7 +11,7 @@ public class HeatMapFrame extends JFrame {
     int lastX;
     int lastY;
     HeatMapFrame(HashMap<Integer,Integer> data){
-        this.add(new HeatMapPanel());
+        this.add(new HeatMapPanel(data));
 
         this.addMouseListener(new MouseListener() {
             @Override

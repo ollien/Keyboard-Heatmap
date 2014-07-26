@@ -16,7 +16,7 @@ public class Main {
                         currentValue = keyMap.get(keyCode);
                     }
                     keyMap.put(keyCode,currentValue+1);
-//                    System.out.println(keyCode);
+                    System.out.println(keyCode);
                 }
             }));
         } catch (NativeHookException e) {

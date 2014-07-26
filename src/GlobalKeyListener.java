@@ -3,7 +3,10 @@
  */
 import org.jnativehook.keyboard.*;
 public class GlobalKeyListener implements NativeKeyListener{
-    public GlobalKeyListener()
+    Callback<Integer> c;
+    public GlobalKeyListener(Callback<Integer> c){
+        this.c = c;
+    }
     @Override
     public void nativeKeyPressed(NativeKeyEvent nativeKeyEvent) {
 
@@ -11,7 +14,7 @@ public class GlobalKeyListener implements NativeKeyListener{
 
     @Override
     public void nativeKeyReleased(NativeKeyEvent nativeKeyEvent) {
-
+        c.callback(nativeKeyEvent.getKeyCode());
     }
 
     @Override

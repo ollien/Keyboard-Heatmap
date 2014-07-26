@@ -68,7 +68,28 @@ public class HeatMapPanel extends JPanel {
         g.setColor(new Color(colorCode,0,0));
         g.fillRect(0,35,30,30);
         //Now for the numbers 1-9 0 has to be separate since it has a keyCode value below any of the numbers and it has to be special.
+        for(int i=0; i<9; i++){
+            colorCode = getColorCode(KeyEvent.VK_1+i);
+            g.setColor(new Color(colorCode,0,0));
+            //i+1 so the x vealue will never be 0, and we skip the space where the grave key is.
+            g.fillRect((i+1)*35,35, 30,30);
+        }
+        colorCode = getColorCode(KeyEvent.VK_0);
+        g.setColor(new Color(colorCode,0,0));
+        g.fillRect(350,35,30,30);
 
+        colorCode = getColorCode(KeyEvent.VK_MINUS);
+        g.setColor(new Color(colorCode,0,0));
+        g.fillRect(385,35,30,30);
+
+        colorCode = getColorCode(KeyEvent.VK_PLUS);
+        g.setColor(new Color(colorCode,0,0));
+        g.fillRect(420,35,30,30);
+
+        //Backspace has to be two keys wide.
+        colorCode = getColorCode(KeyEvent.VK_BACK_SPACE);
+        g.setColor(new Color(colorCode,0,0));
+        g.fillRect(455,35,60,30);
 
     }
     private int getColorCode(int keyCode){

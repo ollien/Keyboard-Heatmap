@@ -12,19 +12,26 @@ public class HeatMapPanel extends JPanel {
     HashMap<Integer,Integer> data;
     HeatMapPanel(HashMap<Integer,Integer> data){
         this.data = data;
+        //Debug data
+        data.put(KeyEvent.VK_F1,50);
+        data.put(KeyEvent.VK_F2,100);
+        data.put(KeyEvent.VK_F3,300);
     }
     //This function will take all the totals, and calculate them out of 255, which will be the Red value in the color code for the heatmap. The RGB values will be R,0,0
     private HashMap<Integer,Integer> calculatePercentages(){
         HashMap<Integer,Integer> tempData = new HashMap<Integer, Integer>();
         int maxValue = getLargestKey();
+        System.out.println(maxValue);
         for (int keyCode : data.keySet()){
+            int keyValue = data.get(keyCode);
 //            Calculate the proportion
-//            keyCode     x
+//            keyValue     x
 //            -------- = ---
 //            maxValue   255
 //            Which solves to keyCode*255 = maxValue*x
 //            Which isolated is equal to (keyCode*255)/maxValue
-            int value = keyCode*255/maxValue;
+            int value = keyValue*255/maxValue;
+            System.out.println(value);
             tempData.put(keyCode,value);
         }
         return tempData;
@@ -40,16 +47,27 @@ public class HeatMapPanel extends JPanel {
     }
     @Override
     public void paint(Graphics g){
+        int colorCode;
         data = calculatePercentages();
-
         //Escape key
-//        g.setColor(new Color())
+        if (data.containsKey(KeyEvent.VK_ESCAPE))
+            colorCode = data.get(KeyEvent.VK_ESCAPE);
+        else
+            colorCode = 0;
+        System.out.println(colorCode);
+        g.setColor(new Color(colorCode,0,0));
         g.fillRect(0, 0, 30, 30);
 
-        //Leave a 30 pixel space for the space between the escape key and the f row
-        //F row and print screen and scrlk and pause/break
-        for (int i=0; i<15; i++){
-            
+        //Leave a 35 pixel space for the space between the escape key and the f row
+        //F row and print screen
+        for (int i=0; i<=12; i++){
+            if (data.containsKey(KeyEvent.VK_F1+i))
+                colorCode = data.get(KeyEvent.VK_F1+i);
+            else
+                colorCode = 0;
+            g.setColor(new Color(colorCode,0,0));
+            //i+2 so the x value will never be 0, and we actually skip a space. A bit hacky, but it works.
+            g.fillRect((i+2)*35, 0, 30,30);
         }
 
     }

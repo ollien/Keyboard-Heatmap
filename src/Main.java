@@ -23,7 +23,6 @@ public class Main {
             e.printStackTrace();
         }
         HeatMapFrame p = new HeatMapFrame(keyMap);
-        p.pack();
         p.setVisible(true);
         System.out.println("Hello World!");
 

@@ -267,7 +267,72 @@ public class HeatMapPanel extends JPanel {
 
         //Time for row 4, let's do this.
 
+        colorCode = getColorCode(NativeKeyEvent.VK_SHIFT);
+        g.setColor(new Color(colorCode,0,0));
+        g.fillRect(0,140,66,30);
+
+        colorCode = getColorCode(NativeKeyEvent.VK_Z);
+        g.setColor(new Color(colorCode,0,0));
+        g.fillRect(71,140,30,30);
+
+        colorCode = getColorCode(NativeKeyEvent.VK_X);
+        g.setColor(new Color(colorCode,0,0));
+        g.fillRect(106,140,30,30);
+
+        colorCode = getColorCode(NativeKeyEvent.VK_C);
+        g.setColor(new Color(colorCode,0,0));
+        g.fillRect(141,140,30,30);
+
+        colorCode = getColorCode(NativeKeyEvent.VK_V);
+        g.setColor(new Color(colorCode,0,0));
+        g.fillRect(176,140,30,30);
+
+        colorCode = getColorCode(NativeKeyEvent.VK_B);
+        g.setColor(new Color(colorCode,0,0));
+        g.fillRect(211,140,30,30);
+
+        colorCode = getColorCode(NativeKeyEvent.VK_N);
+        g.setColor(new Color(colorCode,0,0));
+        g.fillRect(246,140,30,30);
+
+        colorCode = getColorCode(NativeKeyEvent.VK_M);
+        g.setColor(new Color(colorCode,0,0));
+        g.fillRect(281,140,30,30);
+
+        colorCode = getColorCode(NativeKeyEvent.VK_COMMA);
+        g.setColor(new Color(colorCode,0,0));
+        g.fillRect(316,140,30,30);
+
+        colorCode = getColorCode(NativeKeyEvent.VK_PERIOD);
+        g.setColor(new Color(colorCode,0,0));
+        g.fillRect(351,140,30,30);
+
+        colorCode = getColorCode(NativeKeyEvent.VK_SLASH);
+        g.setColor(new Color(colorCode,0,0));
+        g.fillRect(386,140,30,30);
+
+        colorCode = getColorCode(NativeKeyEvent.VK_SHIFT);
+        g.setColor(new Color(colorCode,0,0));
+        g.fillRect(421,150,30,30);
+
+        colorCode = getColorCode(NativeKeyEvent.VK_UP);
+        g.setColor(new Color(colorCode,0,0));
+        g.fillRect(570,150,30,30);
+
+        //Numpad row 1
+        for (int i=0; i<3; i++){
+            colorCode = getColorCode(NativeKeyEvent.VK_NUMPAD1+i);
+            g.setColor(new Color(colorCode,0,0));
+            g.fillRect(650+i*35,150,30,30);
+        }
+
+        //For some reason the enter key shows a keycode of 0, rather than any other functional keycode. KEY_LOCATION_UNKOWN is 0, so I set it to that.
+        colorCode = getColorCode(NativeKeyEvent.KEY_LOCATION_UNKNOWN);
+        g.setColor(new Color(colorCode,0,0));
+        g.fillRect(755,150,30,65);
+
         
+
 
     }
     private int getColorCode(int keyCode){

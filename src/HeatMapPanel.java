@@ -199,8 +199,75 @@ public class HeatMapPanel extends JPanel {
         //Numpad + button, this has to be 2 times the height of a normal key
         colorCode = getColorCode(NativeKeyEvent.VK_ADD);
         g.setColor(new Color(colorCode,0,0));
-        g.fillRect(755,70,30,60);
+        g.fillRect(755,70,30,65);
 
+        //Now we begin the third row
+        colorCode = getColorCode(NativeKeyEvent.VK_CAPS_LOCK);
+        g.setColor(new Color(colorCode,0,0));
+        g.fillRect(0,105,54,30);
+
+        colorCode = getColorCode(NativeKeyEvent.VK_A);
+        g.setColor(new Color(colorCode,0,0));
+        g.fillRect(59,105,30,30);
+
+        colorCode = getColorCode(NativeKeyEvent.VK_S);
+        g.setColor(new Color(colorCode,0,0));
+        g.fillRect(94,105,30,30);
+
+        colorCode = getColorCode(NativeKeyEvent.VK_D);
+        g.setColor(new Color(colorCode,0,0));
+        g.fillRect(129,105,30,30);
+
+        colorCode = getColorCode(NativeKeyEvent.VK_F);
+        g.setColor(new Color(colorCode,0,0));
+        g.fillRect(164,105,30,30);
+
+        colorCode = getColorCode(NativeKeyEvent.VK_G);
+        g.setColor(new Color(colorCode,0,0));
+        g.fillRect(199,105,30,30);
+
+        colorCode = getColorCode(NativeKeyEvent.VK_H);
+        g.setColor(new Color(colorCode,0,0));
+        g.fillRect(234,105,30,30);
+
+        colorCode = getColorCode(NativeKeyEvent.VK_J);
+        g.setColor(new Color(colorCode,0,0));
+        g.fillRect(269,105,30,30);
+
+        colorCode = getColorCode(NativeKeyEvent.VK_K);
+        g.setColor(new Color(colorCode,0,0));
+        g.fillRect(304,105,30,30);
+
+        colorCode = getColorCode(NativeKeyEvent.VK_L);
+        g.setColor(new Color(colorCode,0,0));
+        g.fillRect(339,105,30,30);
+
+        colorCode = getColorCode(NativeKeyEvent.VK_SEMICOLON);
+        g.setColor(new Color(colorCode,0,0));
+        g.fillRect(374,105,30,30);
+
+        colorCode = getColorCode(NativeKeyEvent.VK_QUOTE);
+        g.setColor(new Color(colorCode,0,0));
+        g.fillRect(409,105,30,30);
+
+        colorCode = getColorCode(NativeKeyEvent.VK_ENTER);
+        g.setColor(new Color(colorCode,0,0));
+        g.fillRect(444,105,71,30);
+
+        colorCode = getColorCode(NativeKeyEvent.VK_ENTER);
+        g.setColor(new Color(colorCode,0,0));
+        g.fillRect(444,105,71,30);
+
+        //Numpad row 3!
+        for (int i=0; i<3; i++){
+            colorCode = getColorCode(NativeKeyEvent.VK_NUMPAD4+i);
+            g.setColor(new Color(colorCode,0,0));
+            g.fillRect(650+i*35,105,30,30);
+        }
+
+        //Time for row 4, let's do this.
+
+        
 
     }
     private int getColorCode(int keyCode){

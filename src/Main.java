@@ -1,6 +1,9 @@
 import org.jnativehook.GlobalScreen;
 import org.jnativehook.NativeHookException;
+import org.jnativehook.keyboard.NativeKeyEvent;
+
 import java.util.HashMap;
+import java.util.logging.LogManager;
 
 
 public class Main {
@@ -8,6 +11,7 @@ public class Main {
     public static void main(String[] args) {
         try {
             GlobalScreen.registerNativeHook();
+            LogManager.getLogManager().reset();
             GlobalScreen.getInstance().addNativeKeyListener(new GlobalKeyListener(new Callback<Integer>() {
                 @Override
                 public void callback(Integer keyCode) {
@@ -22,11 +26,11 @@ public class Main {
         } catch (NativeHookException e) {
             e.printStackTrace();
         }
-//        try {
-//            Thread.sleep(30000);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
+        try {
+            Thread.sleep(30000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         HeatMapFrame p = new HeatMapFrame(keyMap);
         p.setVisible(true);
         System.out.println("Hello World!");

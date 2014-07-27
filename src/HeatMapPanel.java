@@ -8,7 +8,7 @@ import java.util.HashMap;
 /**
  * Created by Nick on 7/26/14.
  */
-public class HeatMapPanel extends JPanel {
+public class HeatMapPanel extends JComponent {
     HashMap<Integer,Integer> data;
     HeatMapPanel(HashMap<Integer,Integer> data){
         this.data = data;

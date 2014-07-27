@@ -12,8 +12,12 @@ public class HeatMapFrame extends JFrame {
     int lastX;
     int lastY;
     HeatMapFrame(HashMap<Integer,Integer> data){
+        //Dear lord this is a hacky way of adding a border around my panel.
+        JPanel panel = new JPanel();
+        panel.setBorder(new EmptyBorder(20,20,20,20));
         HeatMapPanel hp = new HeatMapPanel(data);
-        this.add(hp);
+        panel.add(hp);
+        this.add(panel);
         this.pack();
     }
 }

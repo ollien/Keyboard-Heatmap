@@ -326,11 +326,61 @@ public class HeatMapPanel extends JComponent {
             g.fillRect(650+i*35,140,30,30);
         }
 
-        //For some reason the enter key shows a keycode of 0, rather than any other functional keycode. KEY_LOCATION_UNKOWN is 0, so I set it to that.
-        colorCode = getColorCode(NativeKeyEvent.KEY_LOCATION_UNKNOWN);
+        colorCode = getColorCode(NativeKeyEvent.VC_KP_ENTER);
         g.setColor(new Color(colorCode,0,0));
         g.fillRect(755,140,30,65);
 
+        //Final row, let's do this!
+        colorCode = getColorCode(NativeKeyEvent.VC_CONTROL_L);
+        g.setColor(new Color(colorCode,0,0));
+        g.fillRect(0,175,38,30);
+
+        colorCode = getColorCode(NativeKeyEvent.VC_ALT_L);
+        g.setColor(new Color(colorCode,0,0));
+        g.fillRect(43,175,38,30);
+
+        colorCode = getColorCode(NativeKeyEvent.VC_META_L);
+        g.setColor(new Color(colorCode,0,0));
+        g.fillRect(86,175,38,30);
+
+        colorCode = getColorCode(NativeKeyEvent.VC_SPACE);
+        g.setColor(new Color(colorCode,0,0));
+        g.fillRect(129,175,257,30);
+
+        colorCode = getColorCode(NativeKeyEvent.VC_CONTROL_R);
+        g.setColor(new Color(colorCode,0,0));
+        g.fillRect(391,175,38,30);
+
+        colorCode = getColorCode(NativeKeyEvent.VC_ALT_R);
+        g.setColor(new Color(colorCode,0,0));
+        g.fillRect(434,175,38,30);
+
+        colorCode = getColorCode(NativeKeyEvent.VC_META_R);
+        g.setColor(new Color(colorCode,0,0));
+        g.fillRect(477,175,38,30);
+
+        colorCode = getColorCode(NativeKeyEvent.VC_LEFT);
+        g.setColor(new Color(colorCode,0,0));
+        g.fillRect(535,175,30,30);
+
+        colorCode = getColorCode(NativeKeyEvent.VC_DOWN);
+        g.setColor(new Color(colorCode,0,0));
+        g.fillRect(570,175,30,30);
+
+        colorCode = getColorCode(NativeKeyEvent.VC_RIGHT);
+        g.setColor(new Color(colorCode,0,0));
+        g.fillRect(605,175,30,30);
+
+        colorCode = getColorCode(NativeKeyEvent.VC_KP_0);
+        g.setColor(new Color(colorCode,0,0));
+        g.fillRect(650,175,65,30);
+
+        //Who the fuck calls a decimal a separtator...
+        colorCode = getColorCode(NativeKeyEvent.VC_KP_SEPARATOR);
+        g.setColor(new Color(colorCode,0,0));
+        g.fillRect(720,175,30,30);
+
+        //WE DID IT REDDIT.
 
 
     }

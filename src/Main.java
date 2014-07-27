@@ -26,11 +26,11 @@ public class Main {
         } catch (NativeHookException e) {
             e.printStackTrace();
         }
-        try {
-            Thread.sleep(30000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            Thread.sleep(30000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
         HeatMapFrame p = new HeatMapFrame(keyMap);
         p.setVisible(true);
         System.out.println("Hello World!");

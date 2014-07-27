@@ -313,25 +313,24 @@ public class HeatMapPanel extends JPanel {
 
         colorCode = getColorCode(NativeKeyEvent.VK_SHIFT);
         g.setColor(new Color(colorCode,0,0));
-        g.fillRect(421,150,30,30);
+        g.fillRect(421,140,94,30);
 
         colorCode = getColorCode(NativeKeyEvent.VK_UP);
         g.setColor(new Color(colorCode,0,0));
-        g.fillRect(570,150,30,30);
+        g.fillRect(570,140,30,30);
 
         //Numpad row 1
         for (int i=0; i<3; i++){
             colorCode = getColorCode(NativeKeyEvent.VK_NUMPAD1+i);
             g.setColor(new Color(colorCode,0,0));
-            g.fillRect(650+i*35,150,30,30);
+            g.fillRect(650+i*35,140,30,30);
         }
 
         //For some reason the enter key shows a keycode of 0, rather than any other functional keycode. KEY_LOCATION_UNKOWN is 0, so I set it to that.
         colorCode = getColorCode(NativeKeyEvent.KEY_LOCATION_UNKNOWN);
         g.setColor(new Color(colorCode,0,0));
-        g.fillRect(755,150,30,65);
+        g.fillRect(755,140,30,65);
 
-        
 
 
     }

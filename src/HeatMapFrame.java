@@ -1,4 +1,5 @@
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.HashMap;
@@ -11,7 +12,8 @@ public class HeatMapFrame extends JFrame {
     int lastX;
     int lastY;
     HeatMapFrame(HashMap<Integer,Integer> data){
-        this.add(new HeatMapPanel(data));
+        HeatMapPanel hp = new HeatMapPanel(data);
+        this.add(hp);
         this.pack();
     }
 }

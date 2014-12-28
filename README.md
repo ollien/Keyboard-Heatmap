@@ -4,3 +4,5 @@ A heatmap for a keyboard, written in Java with JNativeHook. The layout is coded 
 
 JNativeHook can be found here.
 https://github.com/kwhat/jnativehook
+
+![Screenshot](https://raw.githubusercontent.com/ollien/Keyboard-Heatmap/master/README_SCREENSHOT.png)

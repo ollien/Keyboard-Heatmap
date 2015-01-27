@@ -380,7 +380,7 @@ public class HeatMapPanel extends JComponent {
         g.setColor(new Color(colorCode,0,0));
         g.fillRect(720,175,30,30);
 
-        //WE DID IT REDDIT.
+        //End keyboard display.
 
 
     }
